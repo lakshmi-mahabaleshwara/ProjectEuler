@@ -80,14 +80,14 @@ public class XORDecryption {
                 for(int k = LOWER_CASE_ASCII_START; k <= LOWER_CASE_ASCII_END; k++){
                     int sum = 0;
                     int[] keys = {i, j, k};
-					int index = 0;
-					StringBuffer output = new StringBuffer();
-					for(int letter : CIPHER_TEXT_ARRAY) {
+		    int index = 0;
+		    StringBuffer output = new StringBuffer();
+		    for(int letter : CIPHER_TEXT_ARRAY) {
                         char ch = (char)(letter ^ keys[index]);
                         output.append(ch);
                         sum += (ch);
                         index = (index+1) % 3;
-					}
+		    }
                     /**
                      * According to Internet, The most common three-letter words in order of frequency used are
                      the, and, for, are, but, not, you, all, any, can, had, her, was, one, our, out, day, get, has, him,
